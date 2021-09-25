@@ -1,0 +1,31 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.carousel-main {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 1000px;
+  height: 600px;
+  border: 4px solid;
+  border-radius: 8px;
+}
+
+.carousel-navigation {
+  display: flex;
+  width: 800px;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.carousel-navigation > i {
+  cursor: pointer;
+  color: #aaa;
+}
+
+.carousel-navigation > i:hover {
+  color: black;
+}

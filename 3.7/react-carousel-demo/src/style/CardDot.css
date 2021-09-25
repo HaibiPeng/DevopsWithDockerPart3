@@ -1,0 +1,14 @@
+.carddot {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: auto 0;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 5px;
+    background-color: #696969;
+    margin: 5px;
+    transition: 500ms all ease-in-out;
+}

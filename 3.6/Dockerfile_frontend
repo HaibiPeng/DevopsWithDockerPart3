@@ -1,0 +1,18 @@
+FROM node:alpine AS build-env
+
+WORKDIR /usr/src/app
+COPY ./example-frontend ./
+
+RUN npm install && \
+    npm run build && \
+    adduser -D appuser && \
+    chown appuser .
+
+USER appuser
+
+FROM nginx:1.19-alpine
+
+EXPOSE 5000
+ENV REACT_APP_BACKEND_URL=http://localhost:8080
+
+COPY --from=build-env /usr/src/app/build/ /usr/share/nginx/html
